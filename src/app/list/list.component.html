@@ -1,0 +1,64 @@
+<div class="row text-center justify-content-center" id="studentList">
+  <div class="col-md-8">
+    <h3 class="text-center">Existing Records</h3>
+    <p *ngIf="thiefs.length < 1">No Data found</p>
+    <mat-table
+      [dataSource]="thiefs"
+      class="mat-elevation-z8"
+      *ngIf="thiefs.length >= 1"
+    >
+      <ng-container matColumnDef="no">
+        <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>
+        <mat-cell *matCellDef="let element; index as i">
+          {{ i + 1 }}
+        </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="name">
+        <mat-header-cell *matHeaderCellDef> Full Name </mat-header-cell>
+        <mat-cell *matCellDef="let element">{{ element.name }} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="gender">
+        <mat-header-cell *matHeaderCellDef> Gender </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{ element.gender }} </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="height">
+        <mat-header-cell *matHeaderCellDef> Height </mat-header-cell>
+        <mat-cell *matCellDef="let element">
+          {{ element.height }}
+        </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="op_area">
+        <mat-header-cell *matHeaderCellDef> Operation Area </mat-header-cell>
+        <mat-cell *matCellDef="let element">
+          {{ element.op_area }}
+        </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="age">
+        <mat-header-cell *matHeaderCellDef> Age </mat-header-cell>
+        <mat-cell *matCellDef="let element">
+          {{ element.age }}
+        </mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="options">
+        <mat-header-cell *matHeaderCellDef>Options</mat-header-cell>
+        <mat-cell *matCellDef="let row">
+          <button mat-icon-button (click)="onEdit(row)">
+            <mat-icon>edit</mat-icon>
+          </button>
+          <button mat-icon-button color="warn" (click)="onDelete(row)">
+            <mat-icon>delete_outline</mat-icon>
+          </button>
+        </mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+    </mat-table>
+  </div>
+</div>

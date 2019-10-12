@@ -1,0 +1,6 @@
+#thiefForm input.ng-touched.ng-invalid {
+  border-color: darkred;
+}
+.not-allowed {
+  cursor: not-allowed;
+}

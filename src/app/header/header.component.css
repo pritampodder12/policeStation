@@ -1,0 +1,38 @@
+.mat-elevation-z6 {
+  box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2),
+    0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
+}
+mat-toolbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  background-color: #3f51b5;
+  color: #fff;
+}
+button:focus {
+  outline: 0;
+}
+.space {
+  flex: 1 1 auto;
+}
+.gap {
+  margin-right: 20px;
+}
+
+.mat-button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.logo {
+  height: 30px;
+  width: auto;
+  display: block;
+}
+#element1 {
+  display: inline-block;
+  margin-right: 10px;
+}
+#elememt2 {
+  display: inline-block;
+}

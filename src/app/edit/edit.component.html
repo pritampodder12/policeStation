@@ -1,0 +1,76 @@
+<a class="close-diag" (click)="onClose()"><mat-icon>close</mat-icon></a>
+<div class="row">
+  <div class="col-md-6 offset-md-3">
+    <h2>Update Data</h2>
+    <form #thiefForm="ngForm" (ngSubmit)="onUpdate(thiefForm)" id="thiefForm">
+      <div class="form-group">
+        <label>Name:</label>
+        <input
+          class="form-control"
+          type="text"
+          name="name"
+          [(ngModel)]="this.thiefService.singleRow.name"
+          required
+          minlength="3"
+        />
+      </div>
+
+      <div class="form-group">
+        <label>Gender:</label>
+        <select
+          class="form-control"
+          name="gender"
+          [(ngModel)]="this.thiefService.singleRow.gender"
+          required
+        >
+          <option>Male</option>
+          <option>Female</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Height:</label>
+        <input
+          class="form-control"
+          type="number"
+          name="height"
+          [(ngModel)]="this.thiefService.singleRow.height"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label>Area of operation:</label>
+        <input
+          class="form-control"
+          type="text"
+          name="op_area"
+          [(ngModel)]="this.thiefService.singleRow.op_area"
+          required
+          minlength="2"
+        />
+      </div>
+
+      <div class="form-group">
+        <label>Age:</label>
+        <input
+          class="form-control"
+          type="number"
+          name="age"
+          [(ngModel)]="this.thiefService.singleRow.age"
+          required
+        />
+      </div>
+
+      <button
+        class="btn btn-primary"
+        [ngClass]="{ 'not-allowed': !thiefForm.valid }"
+        [disabled]="thiefForm.invalid"
+      >
+        Update
+      </button>
+      <button class="btn btn-light" type="reset">Reset</button>
+    </form>
+  </div>
+</div>
+<!-- <router-outlet></router-outlet> -->
