@@ -5,6 +5,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Development server
 ---------------------------------------------------
 
+STEP 0:--   In your terminal run "git clone https://github.com/pritampodder12/policeStation.git". 
+            After that change directory to the project folder which is "policeStation" by default.
 
 STEP 1:--   RUN "npm install" to install all dependencies.
 
