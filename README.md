@@ -8,6 +8,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 STEP 1:--   download mongodb from https://www.mongodb.com/download-center/community
             Then install it.
             *Uncheck   " install mongodb compass"   during installation process.
+            
+            
 STEP 2:--   download and install mongoDB compass from https://www.mongodb.com/download-center/compass and run the application.
 
 STEP 3:--  now copy the  download path where mongodb installed.
@@ -18,6 +20,8 @@ STEP 4:-- now goto search bar of windows and type "advance system setting"
            then from system variable select "path" and click "edit"
            then click "new" and paste the path you copied before.
            then click ok ok done.
+           
+           
 STEP 5:--  Now open cmd and run "md c:\data\db" and enter.
 
 STEP 6:--  Then goto mongodb compass and click next next..... and get started. Then click connect.
